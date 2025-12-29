@@ -1,33 +1,36 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 // import { ThemeProvider as NextThemesProvider } from "next-themes";
 // import { ThemeProviderProps } from "next-themes/dist/types";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export interface ProvidersProps {
-	children: React.ReactNode;
-	// themeProps?: ThemeProviderProps;
+  children: React.ReactNode;
+  // themeProps?: ThemeProviderProps;
 }
 
 export function Providers({ children }: ProvidersProps) {
-	const router = useRouter();
+  const router = useRouter();
 
-	const [queryClient] = React.useState(() => new QueryClient({
-		defaultOptions: {
-			queries: {
-				staleTime: 60 * 1000,
-			},
-		},
-	}));
+  const [queryClient] = React.useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            staleTime: 60 * 1000,
+          },
+        },
+      })
+  );
 
-	return (
-		<QueryClientProvider client={queryClient}>
-				{/* <NextThemesProvider {...themeProps}>{children}</NextThemesProvider> */}
-				{children}
-			<ReactQueryDevtools initialIsOpen={false} />
-		</QueryClientProvider>
-	);
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* <NextThemesProvider {...themeProps}>{children}</NextThemesProvider> */}
+      {children}
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 }

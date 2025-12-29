@@ -1,172 +1,161 @@
-/* @import url('./reset.css');
-@import url('./common/input.css');
- */
-
-
+@import url("./reset.css");
 
 :root {
-   /* light 모드 기본값 */
-   --color-bg100: #fff;
-   --color-bg200: #f7f7f7;
-   --color-bg300: #dedede;
-   --color-bg400: #e0e0e0;
-   --color-line100: #8B8B8B;
-   --color-line200: #8B8B8B;
-   --color-line300: #8B8B8B;
-   --color-star: #ebdf32;
-   --color-divider100: #8B8B8B;
-   --color-gray9: #8B8B8B;
-   --color-gray10: #8B8B8B;
-   --scroll-color: rgb(108, 108, 108);
-   --scroll-bg-color: rgb(71, 71, 71);
+  /* light 모드 기본값 */
+  --color-bg100: #fff;
+  --color-bg200: #f7f7f7;
+  --color-bg300: #dedede;
+  --color-bg400: #e0e0e0;
+  --color-line100: #8b8b8b;
+  --color-line200: #8b8b8b;
+  --color-line300: #8b8b8b;
+  --color-star: #ebdf32;
+  --color-divider100: #8b8b8b;
+  --color-gray9: #8b8b8b;
+  --color-gray10: #8b8b8b;
+  --scroll-color: rgb(108, 108, 108);
+  --scroll-bg-color: rgb(71, 71, 71);
 
-   --color-primary: #D85010;
-   --color-primary2: #D85010;
-   --color-secondary: #8FE519;
-   --color-secondary2: #6DBC00;
+  --color-primary: #d85010;
+  --color-primary2: #d85010;
+  --color-secondary: #8fe519;
+  --color-secondary2: #6dbc00;
 }
 
 .dark {
-   /* 다크 모드에서 변경 */
-   --color-bg100: #000000;
-   --color-bg200: #111;
-   --color-bg300: #18181b;
-   --color-bg400: #3d4047;
-   /* --color-gray3: #3d4047; */
-   --color-line100: #262626;
-   --color-line200: #363636;
-   --color-line300: #4a4a4a;
-   --color-star: #ebdf32;
-   --color-divider100: #161616;
-   --color-gray6: #8B8B8B;
-   --color-gray7: #8B8B8B;
-   --color-gray8: #8B8B8B;
-   --color-gray9: #8B8B8B;
-   --color-gray10: #8B8B8B;
-   --scroll-color: rgb(108, 108, 108);
-   --scroll-bg-color: rgb(71, 71, 71);
-   --color-primary: #D85010;
-   --color-primary2: #D85010;
-   --color-secondary: #8FE519;
-   --color-secondary2: #6DBC00;
+  /* 다크 모드에서 변경 */
+  --color-bg100: #000000;
+  --color-bg200: #111;
+  --color-bg300: #18181b;
+  --color-bg400: #3d4047;
+  /* --color-gray3: #3d4047; */
+  --color-line100: #262626;
+  --color-line200: #363636;
+  --color-line300: #4a4a4a;
+  --color-star: #ebdf32;
+  --color-divider100: #161616;
+  --color-gray6: #8b8b8b;
+  --color-gray7: #8b8b8b;
+  --color-gray8: #8b8b8b;
+  --color-gray9: #8b8b8b;
+  --color-gray10: #8b8b8b;
+  --scroll-color: rgb(108, 108, 108);
+  --scroll-bg-color: rgb(71, 71, 71);
+  --color-primary: #d85010;
+  --color-primary2: #d85010;
+  --color-secondary: #8fe519;
+  --color-secondary2: #6dbc00;
 }
 
-
-
-
-
+html {
+  font-size: 10px;
+}
 
 /* scroll */
 *::-webkit-scrollbar {
-   width: 7px;
-   height: 7px;
-   /* height: 100%; */
+  width: 7px;
+  height: 7px;
+  /* height: 100%; */
 }
 
 *::-webkit-scrollbar-thumb {
-   height: 20%;
-   background: var(--scroll-color);
-   /* 스크롤바의 색상 */
-   border-radius: 4px;
+  height: 20%;
+  background: var(--scroll-color);
+  /* 스크롤바의 색상 */
+  border-radius: 4px;
 }
 
 *::-webkit-scrollbar-track {
-   background: var(--scroll-bg-color);
-   /*스크롤바 뒷 배경 색상*/
+  background: var(--scroll-bg-color);
+  /*스크롤바 뒷 배경 색상*/
 }
-
-
 
 .blind {
-   position: absolute;
-   left: -99999px;
-   top: -99999px;
-   width: 1px;
-   height: 1px;
-   overflow: hidden;
-   margin-left: -1px;
-   border: 0 none !important;
-   background: transparent !important;
-   color: transparent !important;
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin-left: -1px;
+  border: 0 none !important;
+  background: transparent !important;
+  color: transparent !important;
 }
-
-
 
 /* media query */
 .mo {
-   display: none;
+  display: none;
 }
 
 .pc {
-   display: block;
+  display: block;
 }
 
 .mo-flex {
-   display: none;
+  display: none;
 }
 
 .pc-flex {
-   display: flex;
+  display: flex;
 }
 
 @media (max-width: 1024px) {
-   .mo {
-      display: block;
-   }
+  .mo {
+    display: block;
+  }
 
-   .pc {
-      display: none;
-   }
+  .pc {
+    display: none;
+  }
 
-   .mo-flex {
-      display: flex;
-   }
+  .mo-flex {
+    display: flex;
+  }
 
-   .pc-flex {
-      display: none;
-   }
+  .pc-flex {
+    display: none;
+  }
 
-   .contents-wrapper {
-      width: 100%;
-   }
+  .contents-wrapper {
+    width: 100%;
+  }
 }
-
-
 
 /* 마커 삼각형 */
 .customoverlay::before {
-   content: "";
-   position: absolute;
-   bottom: -8px;
-   left: 0;
-   right: 0;
-   margin: auto;
-   display: block;
-   width: 0;
-   height: 0;
-   border-left: 5px solid transparent;
-   border-right: 5px solid transparent;
-   border-bottom: 7px solid #FF6200;
-   /* 삼각형 색상 */
-   border-radius: 0px;
-   transform: rotate(180deg);
-   /* 필요시 방향 조절 */
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #ff6200;
+  /* 삼각형 색상 */
+  border-radius: 0px;
+  transform: rotate(180deg);
+  /* 필요시 방향 조절 */
 }
 
 .customoverlay.active {
-   background-color: #FF6200;
-   color: #fff;
+  background-color: #ff6200;
+  color: #fff;
 }
 
 .customoverlay.active .map_ico_wrap {
-   border: 1px solid #fff;
+  border: 1px solid #fff;
 }
 
 .customoverlay.active .name,
 .customoverlay.active .group_name {
-   color: #fff;
+  color: #fff;
 }
 
-.customoverlay.active .star>svg {
-   color: #fff;
+.customoverlay.active .star > svg {
+  color: #fff;
 }
