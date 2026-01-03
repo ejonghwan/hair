@@ -15,7 +15,7 @@ const Home = () => {
       <br></br>
       <Tooltip.Provider>
         <Tooltip.Root>
-          <Tooltip.Trigecvger>asadasd</Tooltip.Trigecvger>
+          <Tooltip.Trigger>asadasd</Tooltip.Trigger>
           <Tooltip.Portal>
             <Tooltip.Content>
               <Tooltip.Arrow />
